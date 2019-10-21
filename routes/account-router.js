@@ -11,4 +11,12 @@ router.get("/", (req, res) => {
     res.render("account")
 })
 
+//logout user
+router.get('/logout', (req, res) => {
+    let data ={};
+    req.session.destroy();
+    req.redirect("/login?loggedOutSuccessfully=true");
+});
+
+
 module.exports = router

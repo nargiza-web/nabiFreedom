@@ -1,10 +1,24 @@
 const express = require("express")
 const app = express()
 const bodyParser = require("body-parser")
+const session = require("express-session")
 const accountRouter = require("./routes/account-router")
 require('dotenv').config()
 
-app.use(bodyParser.urlencoded({extended:false}))
+
+//using session
+app.use(
+    session({
+      secret: "secret",
+      resave: false,
+      saveUninitialized: true
+    })
+  );
+  app.use(express.static("public"));
+  app.use(bodyParser.urlencoded({ extended: false }));
+  app.use(bodyParser.json());
+    
+  
 
 app.use("/account", accountRouter)
 
