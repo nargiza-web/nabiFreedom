@@ -18,6 +18,10 @@ app.get("/", (req, res) => {
     res.render("index")   
 })
 
+app.get("/aboutus", (req, res) =>{
+    res.render("aboutUs")
+});
+
 
 app.listen(process.env.PORT, () => {
     if (process.env.PORT) {
