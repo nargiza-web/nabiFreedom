@@ -3,6 +3,7 @@ const app = express()
 const bodyParser = require("body-parser")
 const accountRouter = require("./routes/account-router")
 const aboutUs = require("./routes/aboutUs")
+const donationRouter = require("./routes/donation")
 require('dotenv').config()
 
 app.use(express.static("public"));
@@ -12,15 +13,19 @@ app.use("/account", accountRouter)
 
 app.use("/aboutUs", aboutUs)
 
+app.use("/donation", donationRouter)
+
 app.set("view engine", "pug")
 
 app.get("/", (req, res) => {
     res.render("index")   
 })
 
-app.get("/aboutus", (req, res) =>{
-    res.render("aboutUs")
-});
+// app.get("/aboutus", (req, res) =>{
+//     res.render("aboutUs")
+// });
+
+
 
 
 app.listen(process.env.PORT, () => {
