@@ -6,7 +6,7 @@ const accountHelper = require("../../helpers/account-helpers")
 
 
 router.get("/", (req, res) => {
-    res.render("account/signup-member")
+    res.render("account/signup", {query: req.query})
     //sign-up page
 })
 

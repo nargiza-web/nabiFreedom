@@ -1,0 +1,60 @@
+extend ../layout.pug
+
+append head
+    script(src="/scripts/signup.js")
+
+
+block content
+    br
+    .row
+        .col
+            if query.signupFailed
+                .alert-danger
+                    p Sign-Up Failed! Please try again.
+            button(onclick="setSignUpVolunteer()") Volunteer
+            button(onclick="setSignUpMember()") Member
+
+            h2#signup-heading Sign up for a Fresh Start
+            form#signup(action="/account/signup?signup=MEMBER" method="POST")
+                .form-group
+                    label(for="email") Email
+                    input#email.form-control(type="text", name="email")
+                    br
+                .form-group
+                    label(for="password") Password
+                    input#password.form-control(type="password", name="password")
+                    br
+                .form-group
+                    label(for= "first_name") First Name
+                    input#first_name.form-control(type="text", name="first_name")
+                    br
+                .form-group
+                    label(for="last_name") Last Name
+                    input#last_name.form-control(type="text", name="last_name")
+                    br
+                .form-group
+                    label(for="phone_number") Phone Number
+                    input#phone_number.form-control(type="text", name="phone_number")
+                    br
+                .form-group.memberOnly
+                    label(for="street-number") Street Number
+                    input#street-number.form-control(type="text", name="streetNumber")
+                    br
+                .form-group.memberOnly
+                    label(for="street-name") Street Name
+                    input#street-name.form-control(type="text", name="streetName")
+                    br
+                .form-group.memberOnly
+                    label(for="zip") Zip Code
+                    input#zip.form-control(type="text", name="zipCode")
+                    br
+                .form-group.memberOnly
+                    label(for="city") City
+                    input#city.form-control(type="text", name="city")
+                    br
+                .form-group.memberOnly
+                    label(for="state") State eg. TX
+                    input#state.form-control(type="text", name="state")
+                    br
+                .form-group
+                    button(type="submit") Signup

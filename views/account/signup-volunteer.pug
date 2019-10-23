@@ -3,7 +3,7 @@ extend ../layout.pug
 block content
     br
     .row
-        .col-8
+        .col
             form(action="/account/signup?signup=Member" method="POST")
                 .form-group
                     input#email.form-control(type="text", name="email")
@@ -24,26 +24,6 @@ block content
                 .form-group
                     input#phone_number.form-control(type="text", name="phone_number")
                     label(for="phone_number") Phone Number
-                    br
-                .form-group
-                    input#street-number.form-control(type="text", name="streetNumber")
-                    label(for="street-number") Street Number
-                    br
-                .form-group
-                    input#street-name.form-control(type="text", name="streetName")
-                    label(for="street-name") Street Name
-                    br
-                .form-group
-                    input#zip.form-control(type="text", name="zipCode")
-                    label(for="zip") Zip Code
-                    br
-                .form-group
-                    input#city.form-control(type="text", name="city")
-                    label(for="city") City
-                    br
-                .form-group
-                    input#state.form-control(type="text", name="state")
-                    label(for="state") State eg. TX
                     br
                 .form-group
                     button(type="submit") Signup
