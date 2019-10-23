@@ -5,7 +5,12 @@ const bodyParser = require("body-parser")
 const session = require("express-session")
 const accountRouter = require("./routes/account-router")
 const aboutUs = require("./routes/aboutUs")
-const Sequelize = require('sequelize')
+
+const donationRouter = require("./routes/donation")
+
+const contactUs = require("./routes/contactUs")
+
+app.set("view engine", "pug")
 
 require('dotenv').config()
 
@@ -29,22 +34,19 @@ app.use("/account", accountRouter)
 
 app.use("/aboutUs", aboutUs)
 
-app.set("view engine", "pug")
+app.use("/contactUs", contactUs)
+
+app.use("/donation", donationRouter)
+
+
 
 app.get("/", (req, res) => {
     res.render("index")   
 })
 
-app.get("/aboutus", (req, res) =>{
-    res.render("aboutUs")
-});
-app.get("/login", (req, res) =>{
-    res.render("/login")
-});
-
-
-
-
+// app.get("/aboutus", (req, res) =>{
+//     res.render("aboutUs")
+// });
 
 
 

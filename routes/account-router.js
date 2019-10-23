@@ -13,6 +13,14 @@ router.get("/", (req, res) => {
     res.render("account")
 })
 
+//dashboard
+router.get('/dashboard', (req, res) =>{
+    // console.log ('i am here')
+    res.render("account/dashboard")
+})
+
+
+
 //logout user
 router.get('/logout', (req, res) => {
     let data ={};

@@ -20,7 +20,7 @@ router.get("/", (req, res) => {
 });
 
 
-router.post("/login", async (req, res) => {
+router.post("/login", async (req, res, next) => {
     let email = req.body.email,
     password = req.body.password
          try {
@@ -34,15 +34,40 @@ router.post("/login", async (req, res) => {
                  bcrypt.compare(req.body.password, member.password, (err, same) =>{
                  if (err) throw err;
                  if (!same) throw new Error('Incorrect password');
-                 req.session.user_id = db.User.id;   
-                 res.redirect("/")
+                 req.session.user_id = member.id;   
                 });
         }
         })} catch (e){
                 // console.log("everything is exploding!!!")
                 // res.send(e);
             }
+            // next();
+            try {
+                models.Volunteer.findOne({
+                    where:{
+                        email:email
+                    }
+                }) 
+                .then((volunteer) => { 
+                    if(volunteer){
+                         bcrypt.compare(req.body.password, volunteer.password, (err, same) =>{
+                         if (err) throw err;
+                        //  if (!same) throw new Error('Incorrect password');
+
+                        if (same) req.session.user_id
+                         
+                         req.session.user_id = volunteer.id;   
+                        });
+                     } res.redirect("/")
+
+                })} catch (e){
+                        // console.log("everything is exploding!!!")
+                        // res.send(e);
+                    }
+        
+                     
     });
+
 
 
 

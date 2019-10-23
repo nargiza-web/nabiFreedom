@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet" href = "./styles/layout.css")
+        link(rel="stylesheet" href="./styles/donations.css")
+        title=title
+        block head
+    body
+        img.logo(src="images/NABI.png")
+        .container
+            nav.navigation-bar
+                a(href='/') Home
+                a#donate(href='/donation') DONATE
+                a(href="/aboutus") About Us
+                a(href='#') Take Action
+                a(href='#') Fresh Start
+                a(href='/contactUs') Contact Us
+                a(href='#') Login
+        block content
+         
+        div.placeHolder
+         div.security * You will be redirected to our secure payment page to complete your donation.
+         form(action='https://www.paypal.com/cgi-bin/webscr' method='post' target='_top')
+          input(type='hidden' name='hosted_button_id' value='997PXYYBZ4ER6')
+          input(type='hidden' name='cmd' value='_s-xclick')
+          input(type='image' src='https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif' border='0' name='submit' title='PayPal - The safer, easier way to pay online!' alt='Donate with PayPal button')
+          img(alt='' border='0' src='https://www.paypal.com/en_US/i/scr/pixel.gif' width='1' height='1')
+                       
+    footer.footer NABIfreedom is a 501 (c) 3 non-profit as determined by the Internal           Revenue Service.&copy;2017 NABIFreedom. All rights reserved.
+
