@@ -5,6 +5,7 @@ const bodyParser = require("body-parser")
 const session = require("express-session")
 const accountRouter = require("./routes/account-router")
 const aboutUs = require("./routes/aboutUs")
+const Sequelize = require('sequelize')
 
 require('dotenv').config()
 

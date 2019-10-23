@@ -1,14 +1,11 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
 const router = express.Router();
-const bodyParser = require("body-parser")
-
-router.use(bodyParser.urlencoded({ extended: false }));
- router.use(bodyParser.json());
+// const bodyParser = require("body-parser")
+const models = require('../../models')
+// router.use(bodyParser.urlencoded({ extended: false }));
+//  router.use(bodyParser.json());
  
-  //load Member module
-require('../../models/member')
-const Member = 
 
   //member-login
  
@@ -24,25 +21,55 @@ router.get("/", (req, res) => {
 
 
 router.post("/login", async (req, res) => {
-    console.log("are we using this at all")
-    try{
-       // check to see if the user exists in the database
-        let dbUser = await dbUser.CheckForUser(req.body.email);
-        if (!dbUser) throw new Error("Login Failed");
-        console.log("this is before bcrypt")
-        bcrypt.compare(req.body.password, dbUser.password, (err, same) =>{
-            console.log('we are inside bcrypt')
-            if (err) throw err;
-            if (!same) throw new Error('Incorrect password');
-            req.session.user_id = db.User.id;
+    let email = req.body.email,
+    password = req.body.password
+         try {
+        models.Member.findOne({
+            where:{
+                email:email
+            }
+        }) 
+        .then((member) => { 
+            if(member){
+                 bcrypt.compare(req.body.password, member.password, (err, same) =>{
+                 if (err) throw err;
+                 if (!same) throw new Error('Incorrect password');
+                 req.session.user_id = db.User.id;   
+                 res.redirect("/")
+                });
+        }
+        })} catch (e){
+                // console.log("everything is exploding!!!")
+                // res.send(e);
+            }
+    });
+
+
+
+//                 res.status(500).json({status: 500, message: "email does not exist in our database"
+//             }) } else //{
+//                 // let member = models.Member.build({
+//                 //     email:email,
+//                 //     password:password
+//                 //})
+//                 user.save()
+//             } 
+//             })
+//         })
+//     /*}*/
+// //         bcrypt.compare(req.body.password, dbMember.password, (err, same) =>{
+// //             console.log('we are inside bcrypt')
+//             if (err) throw err;
+//             if (!same) throw new Error('Incorrect password');
+//             req.session.user_id = db.User.id;
             
-            res.redirect("/index")
-        });
-    } catch (e){
-        console.log("everything is exploding!!!")
-        res.send(e);
-    }
-});
+//             res.redirect("/index")
+//         });
+//     } catch (e){
+//         console.log("everything is exploding!!!")
+//         res.send(e);
+//     }
+// });
 
 
 
