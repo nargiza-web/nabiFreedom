@@ -1,32 +1,49 @@
-form(action="/account/signup?signup=Member" method="POST")
-    input#email(type="text", name="email")
-    label(for="email") Email
+extend ../layout.pug
+
+block content
     br
-    input#password(type="password", name="password")
-    label(for="password") Password
-    br
-    input#first_name(type="text", name="first_name")
-    label(for= "first_name") First Name
-    br
-    input#last_name(type="text", name="last_name")
-    label(for="last_name") Last Name
-    br
-    input#phone_number(type="text", name="phone_number")
-    label(for="phone_number") Phone Number
-    br
-    input#street-number(type="text", name="streetNumber")
-    label(for="street-number") Street Number
-    br
-    input#street-name(type="text", name="streetName")
-    label(for="street-name") Street Name
-    br
-    input#zip(type="text", name="zipCode")
-    label(for="zip") Zip Code
-    br
-    input#city(type="text", name="city")
-    label(for="city") City
-    br
-    input#state(type="text", name="state")
-    label(for="state") State eg. TX
-    br
-    button(type="submit") Signup
+    .row
+        .col-8
+            form(action="/account/signup?signup=Member" method="POST")
+                .form-group
+                    input#email.form-control(type="text", name="email")
+                    label(for="email") Email
+                    br
+                .form-group
+                    input#password.form-control(type="password", name="password")
+                    label(for="password") Password
+                    br
+                .form-group
+                    input#first_name.form-control(type="text", name="first_name")
+                    label(for= "first_name") First Name
+                    br
+                .form-group
+                    input#last_name.form-control(type="text", name="last_name")
+                    label(for="last_name") Last Name
+                    br
+                .form-group
+                    input#phone_number.form-control(type="text", name="phone_number")
+                    label(for="phone_number") Phone Number
+                    br
+                .form-group
+                    input#street-number.form-control(type="text", name="streetNumber")
+                    label(for="street-number") Street Number
+                    br
+                .form-group
+                    input#street-name.form-control(type="text", name="streetName")
+                    label(for="street-name") Street Name
+                    br
+                .form-group
+                    input#zip.form-control(type="text", name="zipCode")
+                    label(for="zip") Zip Code
+                    br
+                .form-group
+                    input#city.form-control(type="text", name="city")
+                    label(for="city") City
+                    br
+                .form-group
+                    input#state.form-control(type="text", name="state")
+                    label(for="state") State eg. TX
+                    br
+                .form-group
+                    button(type="submit") Signup
