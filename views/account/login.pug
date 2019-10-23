@@ -1,0 +1,38 @@
+extend ../layout
+
+append head
+    link(rel="stylesheet" href = "/styles/layout.css")
+
+block image
+    img.logo(src='/images/NABI.png')
+
+block content
+    h1 Login
+    form(method="POST" action="/account/login/login")
+        .form-group
+         label(for='email') Email address
+        input#email.form-control(type='email' aria-describedby='emailHelp' placeholder='Enter email' name="email")
+        small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
+        .form-group
+        label(for='password') Password
+        input#password.form-control(type='password' placeholder='Enter password' name="password")
+        br
+        button.btn.btn-primary Login
+
+
+
+
+
+
+
+//- block content
+//-     h1 Login
+//-     form(action="/account/login/login" method="POST")
+//-         input#email(type="text", name="email")
+//-         label(for="email") Email
+//-         br
+//-         input#password(type="password", name="password")
+//-         label(for="password") Password
+//-         br
+//-         br
+//-         button(type="submit") Login

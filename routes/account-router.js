@@ -7,6 +7,8 @@ const loginRouter = require("./user/login")
 router.use("/signup", signupRouter)
 router.use("/login", loginRouter)
 
+//router.express.static('public')
+
 router.get("/", (req, res) => {
     res.render("account")
 })

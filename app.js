@@ -1,8 +1,11 @@
 const express = require("express")
+const path = require("path")
 const app = express()
 const bodyParser = require("body-parser")
 const session = require("express-session")
 const accountRouter = require("./routes/account-router")
+const aboutUs = require("./routes/aboutUs")
+
 require('dotenv').config()
 
 
@@ -19,14 +22,31 @@ app.use(
   app.use(bodyParser.json());
     
   
-
 app.use("/account", accountRouter)
+
+//app.use("/account/login", login)
+
+app.use("/aboutUs", aboutUs)
 
 app.set("view engine", "pug")
 
 app.get("/", (req, res) => {
     res.render("index")   
 })
+
+app.get("/aboutus", (req, res) =>{
+    res.render("aboutUs")
+});
+app.get("/login", (req, res) =>{
+    res.render("/login")
+});
+
+
+
+
+
+
+
 
 app.listen(process.env.PORT, () => {
     if (process.env.PORT) {
