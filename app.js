@@ -8,6 +8,8 @@ const donationRouter = require("./routes/donation")
 
 const contactUs = require("./routes/contactUs")
 
+app.set("view engine", "pug")
+
 require('dotenv').config()
 
 app.use(express.static("public"));
@@ -21,7 +23,7 @@ app.use("/contactUs", contactUs)
 
 app.use("/donation", donationRouter)
 
-app.set("view engine", "pug")
+
 
 app.get("/", (req, res) => {
     res.render("index")   
