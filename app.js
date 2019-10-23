@@ -3,6 +3,8 @@ const app = express()
 const bodyParser = require("body-parser")
 const accountRouter = require("./routes/account-router")
 const aboutUs = require("./routes/aboutUs")
+const contactUs = require("./routes/contactUs")
+
 require('dotenv').config()
 
 app.use(express.static("public"));
@@ -11,6 +13,8 @@ app.use(bodyParser.urlencoded({extended:false}))
 app.use("/account", accountRouter)
 
 app.use("/aboutUs", aboutUs)
+
+app.use("/contactUs", contactUs);
 
 app.set("view engine", "pug")
 

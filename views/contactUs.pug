@@ -1,0 +1,62 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet" href = "./styles/contactUs.css")
+        title=title
+        block head
+    body
+        img.logo(src="images/NABI.png")
+        div.container
+            nav.navigation-bar
+                a(href='/') Home
+                a#donate(href='/donation') DONATE
+                a(href="/aboutus") About Us
+                a(href='#') Take Action
+                a(href='#') Fresh Start
+                a(href='/contactUs') Contact Us
+                a(href='#') Login
+        block content
+            if query.submitwassucceccfull
+                .success 
+                    p Thank you for contacting us
+            form(action="/contactUs" method="POST")
+                .form-group * First Name: 
+                    br
+                    input(type="text" name="firstName")
+                    br
+                    | Last Name:
+                    br
+                    input(type="text" name="lastName")
+                    br
+                    | Title
+                    br
+                    input(type="text" name="title")
+                    br
+                    | Address
+                    br
+                    input(type="text" name="address")
+                    br
+                    | * Email 
+                    br
+                    input(type="text" name="email")
+                    br
+                    | Phone
+                    br
+                    input(type="text" name="phone")
+                    br
+                    | * Purpose For Contacting Us
+                    br
+                    textarea(name="message" rows='15' cols='30') 
+                    input(type="submit")
+                    br
+                
+
+
+
+
+
+
+    
+        
