@@ -1,4 +1,5 @@
 const models = require("../models")
+const bcrypt = require("bcrypt")
 
 /** Creates a new entry in a specified table.
  * 
@@ -13,6 +14,22 @@ function createEntry (modelName, obj, successCallback, failureCallback) {
     .catch(failureCallback)
 }
 
+/** Check password and executes a callback function.
+ * 
+ * @param {string} password         Password to check.
+ * @param {object} userObj               Password from database.
+ * @param {*} successCallback       A callback function to run on a success.
+ * @param {*} failureCallback       A callback function to run on a failure.
+ */
+function chkPassword (password, userObj, successCallback, failureCallback) {
+    bcrypt.compare(password, userObj.password, (err, same) => {
+        if (err) throw err
+        if (same) successCallback();
+        else failureCallback();
+    })
+}
+ 
 module.exports = {
-    createEntry:createEntry
+    createEntry:createEntry,
+    chkPassword:chkPassword
 }
