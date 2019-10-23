@@ -17,6 +17,8 @@ app.use("/account", accountRouter)
 
 app.use("/aboutUs", aboutUs)
 
+app.use("/contactUs", contactUs)
+
 app.use("/donation", donationRouter)
 
 app.set("view engine", "pug")
