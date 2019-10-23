@@ -2,13 +2,18 @@ extend ../layout
 
 append head
     link(rel="stylesheet" href = "/styles/layout.css")
+    script(src="/scripts/login.js")
 
-//- block image
-//-     img.logo(src='/images/NABI.png')
+
 
 block content
-    h1 Login
-    form(method="POST" action="/account/login/login")
+    if query.loginFailed
+        .alert-danger
+            p An error occurred signing you in! Check your credentials and try again.
+    h1#login-heading Login Fresh Starter
+    button(onclick="setLoginVolunteer()") Volunteer
+    button(onclick="setLoginMember()") Member
+    form#login(method="POST" action="/account/login?login=MEMBER")
         .form-group
          label(for='email') Email address
         input#email.form-control(type='email' aria-describedby='emailHelp' placeholder='Enter email' name="email")
@@ -19,20 +24,3 @@ block content
         br
         button.btn.btn-primary Login
 
-
-
-
-
-
-
-//- block content
-//-     h1 Login
-//-     form(action="/account/login/login" method="POST")
-//-         input#email(type="text", name="email")
-//-         label(for="email") Email
-//-         br
-//-         input#password(type="password", name="password")
-//-         label(for="password") Password
-//-         br
-//-         br
-//-         button(type="submit") Login
