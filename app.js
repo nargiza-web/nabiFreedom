@@ -3,7 +3,11 @@ const app = express()
 const bodyParser = require("body-parser")
 const accountRouter = require("./routes/account-router")
 const aboutUs = require("./routes/aboutUs")
+
 const donationRouter = require("./routes/donation")
+
+const contactUs = require("./routes/contactUs")
+
 require('dotenv').config()
 
 app.use(express.static("public"));
