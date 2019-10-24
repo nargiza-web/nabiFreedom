@@ -6,6 +6,7 @@ const accountRouter = require("./routes/account-router")
 const aboutUs = require("./routes/aboutUs")
 const freshStart = require("./routes/freshStart")
 const donationRouter = require("./routes/donation")
+const takeAction = require("./routes/takeAction")
 const contactUs = require("./routes/contactUs")
 
 app.set("view engine", "pug")
@@ -24,6 +25,8 @@ app.use("/contactUs", contactUs)
 app.use("/donation", donationRouter)
 
 app.use("/freshStart", freshStart)
+
+app.use("/takeAction", takeAction)
 
 
 
