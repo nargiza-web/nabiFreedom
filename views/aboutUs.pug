@@ -1,18 +1,28 @@
-extend layout
-append head
-    link(rel="stylesheet", href="/styles/aboutUs.css")
-block content
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet" href = "./styles/aboutUs.css")
+        title=title
+        block head
     body
-        div.box1 
-            div.together
-                h1 About Us
-                p Established in 2017, NabiFreedom is an independent 501(c)(3) nonprofit organization. We have pioneered innovative programs that connect dedicated volunteers with convicted felons. Our entrepreneurship re-entry programs are proven solutions for preventing recidivism, maximizing self-sufficiency and transforming broken lives.
-        div.box2 
-            div.together
-                h1 Hope is for everyone
-                p At NabiFreedom we are on a mission to transform inmates and executives by unlocking human potential through entrepreneurial passion, education and mentoring. We strongly believe that everyone should have a another chance to Start Fresh.
-        div.box3 
-            div.together
-                h1 Above and Beyond
-                p We are not just an organization. We go above and beyond to connect with individuals, families, communities to support inmates and executives. Our goal is to make a world where everyone belongs somewhere, feels beloved and belonged to the community, a place and a space you feel home!
+        img.logo(src="images/NABI.png")
+        div.container
+            nav.navigation-bar
+                a(href='/') Home
+                a#donate(href='/donation') DONATE
+                a(href="/aboutus") About Us
+                a(href='#') Take Action
+                a(href='#') Fresh Start
+                a(href='/contactUs') Contact Us
+                a(href='#') Login
+        block content
+          body
+             br
+             div.box1
+             div.box2 
+             div.box3 
             
+                  
+footer.footer NABIfreedom is a 501 (c) 3 non-profit as determined by the Internal           Revenue Service.&copy;2017 NABIFreedom. All rights reserved.                        
