@@ -36,7 +36,9 @@ a:hover{
   
 }
 .home-image{
-  margin-left: 8%;
+  width: 100%;
+  height: auto;
+  margin-left: 15%;
   margin-top: 5%;
 }
 
@@ -45,6 +47,11 @@ a:hover{
     float: right;
     color: #17023d;
     font-family: sans-serif;
+}
+.interior{
+  background-color: #17023d;
+  margin-left:0;
+
 }
 
 footer{
