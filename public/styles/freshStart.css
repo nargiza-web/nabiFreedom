@@ -109,7 +109,8 @@
     height: auto;
     background-color: orange;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: bolder;
     border-radius: 5px;
     border: none;
       
@@ -123,7 +124,8 @@
     height: auto;
     background-color: orange;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: bolder;
     border-radius: 5px;
     border: none;
       
