@@ -100,3 +100,31 @@
     margin-left:0;
   
   }  
+  .signUp{
+    position: absolute;
+    position: fixed;
+    top: 50%;
+    left: 2%;
+    width: 7%;
+    height: auto;
+    background-color: orange;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+      
+  }
+  .signUp2{
+    position: absolute;
+    position: fixed;
+    top: 50%;
+    right: 2%;
+    width: 7%;
+    height: auto;
+    background-color: orange;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+      
+  }
