@@ -5,7 +5,7 @@ const models = require("../../models")
 const accountHelper = require("../../helpers/account-helpers")
 
 
-router.get("/", (req, res) => {
+router.get("/", accountHelper.redirectIfSignedIn, (req, res) => {
     res.render("account/signup", {query: req.query})
     //sign-up page
 })

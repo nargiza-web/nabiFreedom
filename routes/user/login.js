@@ -4,7 +4,7 @@ const router = express.Router()
 const models = require("../../models")
 const accountHelper = require("../../helpers/account-helpers")
 
-router.get("/", (req, res) => {
+router.get("/", accountHelper.redirectIfSignedIn, (req, res) => {
     res.render("account/login.pug", {query:req.query})
     //member-login
 })
@@ -23,7 +23,7 @@ router.post("/", (req, res) => {
     .then((user) => {
         if (user) {
             accountHelper.chkPassword(req.body.password, user, x => {
-                req.session.user = {userType:userType, userId:user.id}
+                req.session.user = {userType:userType, userId:user.id, isAuthenticated:true}
                 res.redirect("/")
             }, loginFailure)
         } else loginFailure();
