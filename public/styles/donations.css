@@ -2,19 +2,85 @@ body {
     margin:0;
     padding:0;
   }
+  /*
   .box1 {
-    height:100vh;
     width:100%;
-    background-image: url("/images/giving.jpeg");
+    height: 100vh;
+    /*background-image: url("/images/giving.jpeg");
     background-size: cover;
     background-position: center;
     display: table;
     background-attachment: fixed;
   }
+  */
+  
+  
+  .image1 {
+    height:37%;
+    width:100%;
+    background-image: url("/images/giving.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: table;
+    /* background-attachment: fixed; */  
+  }
+  
+  .flex{
+      display:flex;
+      width:100%;
+      height: 100px;
+  }
+  .redirectPayPall {
+      width: 35%;
+      height:auto;
+      margin:15px;
+      text-align: center;
+  }
+  .text1 {
+      width: 65%;
+      height: auto;
+      margin: 15px;
+      color: #17023D;
+      font-size: 17px;
+  }
+  .security {
+    color: red;
+    font-size: 13px;
+    text-emphasis:bold;
+    margin-top: 3px;
+  }
+  h4 {
+      color: #17023D;
+      margin-bottom: 3px;
+  }
+  
+  h2 {
+      text-align: center;
+  }
+  
+  #oneTime {
+      margin-left: 40px; 
+  }
+  #address{
+      margin-left: 70px;
+      margin-right: 0;
+      padding-left: 50px;
+  }
+  #last {
+    margin-left: 150px;
+    margin-right: 0;
+    padding-left: 80px;
+  }
+  .button {
+      width: 175px;
+      height: auto;
+  }
   .box2 {
-    height: 100vh;
+    margin-top: 80px;
+    height: 240px;
     width: 100%;
-    background-image: url("https://cdn.pixabay.com/photo/2016/01/07/10/46/freedom-1125539_960_720.jpg");
+    background-color: #BD9B75;
+    /*background-image: url("https://cdn.pixabay.com/photo/2016/01/07/10/46/freedom-1125539_960_720.jpg");*/
     background-size: cover;
     background-position: center;
     display: table;
@@ -22,9 +88,9 @@ body {
   }
   
   .box3 {
-    height: 100vh;
+    height: 250px;
     width: 100%;
-    background-image: url("https://thenypost.files.wordpress.com/2019/05/family-jail.jpg?quality=90&strip=all&w=618&h=410&crop=1");
+    /*background-image: url("https://thenypost.files.wordpress.com/2019/05/family-jail.jpg?quality=90&strip=all&w=618&h=410&crop=1");*/
     background-size: cover;
     background-position: center;
     display: table;
