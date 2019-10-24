@@ -1,6 +1,8 @@
 const express = require("express")
+const path = require("path")
 const app = express()
 const bodyParser = require("body-parser")
+const session = require("express-session")
 const accountRouter = require("./routes/account-router")
 const aboutUs = require("./routes/aboutUs")
 
@@ -12,10 +14,23 @@ app.set("view engine", "pug")
 
 require('dotenv').config()
 
-app.use(express.static("public"));
-app.use(bodyParser.urlencoded({extended:false}))
 
+//using session
+app.use(
+    session({
+      secret: "secret",
+      resave: false,
+      saveUninitialized: true
+    })
+  );
+  app.use(express.static("public"));
+  app.use(bodyParser.urlencoded({ extended: false }));
+  app.use(bodyParser.json());
+    
+  
 app.use("/account", accountRouter)
+
+//app.use("/account/login", login)
 
 app.use("/aboutUs", aboutUs)
 
