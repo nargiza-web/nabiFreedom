@@ -1,0 +1,26 @@
+extend ../layout
+
+append head
+    link(rel="stylesheet" href = "/styles/layout.css")
+    script(src="/scripts/login.js")
+
+
+
+block content
+    if query.loginFailed
+        .alert-danger
+            p An error occurred signing you in! Check your credentials and try again.
+    h1#login-heading Login Fresh Starter
+    button(onclick="setLoginVolunteer()") Volunteer
+    button(onclick="setLoginMember()") Member
+    form#login(method="POST" action="/account/login?login=MEMBER")
+        .form-group
+         label(for='email') Email address
+        input#email.form-control(type='email' aria-describedby='emailHelp' placeholder='Enter email' name="email")
+        small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
+        .form-group
+        label(for='password') Password
+        input#password.form-control(type='password' placeholder='Enter password' name="password")
+        br
+        button.btn.btn-primary Login
+

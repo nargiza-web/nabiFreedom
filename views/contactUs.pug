@@ -13,17 +13,21 @@ html(lang="en")
                 a(href='/') Home
                 a#donate(href='/donation') DONATE
                 a(href="/aboutus") About Us
-                a(href='#') Take Action
-                a(href='#') Fresh Start
+                a(href='takeAction') Take Action
+                a(href='freshStart') Fresh Start
                 a(href='/contactUs') Contact Us
-                a(href='#') Login
+                a(href='account/login') Login
         block content
-            if query.submitwassucceccfull
-                .success 
-                    p Thank you for contacting us
-            form(action="/contactUs" method="POST")
-                .form-group * First Name: 
-                    br
+          div.interior 
+             div.box  
+                if query.submitwassucceccfull
+                    .success 
+                        p.messege *Thank you for contacting us, we will get back to you soon!.
+            
+                    
+                form(action="/contactUs" method="POST")
+                    .form-group * First Name: 
+                    
                     input(type="text" name="firstName")
                     br
                     | Last Name:
@@ -48,10 +52,11 @@ html(lang="en")
                     br
                     | * Purpose For Contacting Us
                     br
-                    textarea(name="message" rows='15' cols='30') 
-                    input(type="submit")
+                    textarea(name="message" rows='15' cols='30')
+                    br 
+                    input.submit(type="submit")
                     br
-                
+    footer.footer NABIfreedom is a 501 (c) 3 non-profit as determined by the Internal           Revenue Service.&copy;2017 NABIFreedom. All rights reserved. PO BOX 38574 Houston TX 77238.           
 
 
 

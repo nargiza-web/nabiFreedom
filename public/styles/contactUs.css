@@ -36,11 +36,7 @@ a:hover{
   
 }
 .home-image{
-  display: block;
-  
-  /* margin-left: 15%; */
-  margin-left: 30vh;
-  margin-right: auto;
+  margin-left: 17%;
   margin-top: 5%;
 }
 
@@ -50,16 +46,55 @@ a:hover{
     color: #17023d;
     font-family: sans-serif;
 }
-.interior{
-  background-color: #17023d;
-  margin-left:0;
-
+form{
+    margin-top: 5%;
+    margin-left: 0;
+    color: #17023d;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
 }
-
+.submit{
+    margin-top: 2%;
+    color: #ffffff;
+    background-color: #17023d;
+    font-size: 20px;
+    width: 80px;
+    height: 40px;
+    border: 4%;
+    border-radius: 7px;
+}
+.box{
+    
+    margin-left: 25%;
+    justify-content: center;
+    margin-top: 5%;
+    width: 50%;
+    height: auto;
+    background-color: rgb(214, 214, 214);
+    padding: 10px;
+    box-shadow: 5px 10px 18px #888888;
+    border-radius: 3%;
+}
 footer{
     padding-top: 3%;
     font-family: sans-serif;
     color: #17023d;
     text-align: center;
     font-size: medium;
+}
+.messege{
+    
+    color: #064d00;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin-left: 26%;
+
+}
+
+.interior{
+  background-color: #17023d;
+  margin-left:0;
+  height: auto;
+
 }
