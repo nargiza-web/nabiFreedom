@@ -1,66 +1,48 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        link(rel="stylesheet" href = "./styles/layout.css")
-        link(rel="stylesheet" href="./styles/donations.css")
-        title=title
-        block head
-    body
-        img.logo(src="images/NABI.png")
-        .container
-            nav.navigation-bar
-                a(href='/') Home
-                a#donate(href='/donation') DONATE
-                a(href="/aboutus") About Us
-                a(href='takeAction') Take Action
-                a(href='freshStart') Fresh Start
-                a(href='/contactUs') Contact Us
-                a(href='/account/login') Login
-        block content
-            div.box1
-                image.image1(src="/images/giving.jpeg" alt="picture")
-                div.flex 
-                    div.redirectPayPall
-                        h4 Support Us By Giving. You Can Do So Here
-                        p.security * You will be redirected to our secure payment page to complete your donation.
-                        form(action='https://www.paypal.com/cgi-bin/webscr' method='post' target='_top')
-                            
-                            input(type='hidden' name='hosted_button_id' value='997PXYYBZ4ER6')
-                            input(type='hidden' name='cmd' value='_s-xclick')
-                            input(type='image' class= "button" src='https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif' border='0' name='submit' title='PayPal - The safer, easier way to pay online!' alt='Donate with PayPal button')
-                            img(alt='' border='0' src='https://www.paypal.com/en_US/i/scr/pixel.gif' width='1' height='1')
-                    div.text1
-                        p Nabi Freedom doesn't receive any federal government funds. Nabi Freedom entirely relies on generous individuals, friends and families, organizations, communities for their support. We thank all our sponsors who supported us and will continue to support.
-            div.box2
-                div.flex
-                    div.redirectPayPal#oneTime
-                        h2 Donate One Time
-                        p Checks can be made to Nabi Freedom, and sent to:
-                        p Nabi Freedom
-                        p P.O. Box 38574
-                        p Houston, TX 77238
-                    div.text1#address
-                        p We strongly encourage you to at least give once at your most convenient cash flow time.
-                        p You can give at any time during th year.
-                        p If you have nay other questions or would like to donate differently please fill our contact us form and we will get back yo you in 1 week.
-                        p Any kind of donations are accepted including checks and all type of credi cards
-            div.box3 
-                div.flex
-                    div.redirectPayPal#oneTime
-                        h3 Any Kind of Donations
-                        ul 
-                            li Gift Cards
-                            li Food Cards
-                            li Gas Cards
-                            li Goodies
-                            li Food Catering
-                    div.text1#last
-                        p We accept any kind of donations. We need all kind of gift cards, food cards, gas cards for our newly rehabilitated citizens. 
-                        p Also we need phones.
-                        p Other items needed are cars, gently used furniture, household items
-    footer.footer NABIfreedom is a 501 (c) 3 non-profit as determined by the Internal           Revenue Service.&copy;2017 NABIFreedom. All rights reserved. PO BOX 38574 Houston TX 77238.
+extend ./layout
+append head
+    link(rel="stylesheet" href="./styles/donations.css")
+
+block content
+    div.box1
+        image.image1(src="/images/giving.jpeg" alt="picture")
+        div.flex 
+            div.redirectPayPall
+                h4 Support Us By Giving. You Can Do So Here
+                p.security * You will be redirected to our secure payment page to complete your donation.
+                form(action='https://www.paypal.com/cgi-bin/webscr' method='post' target='_top')
+                    
+                    input(type='hidden' name='hosted_button_id' value='997PXYYBZ4ER6')
+                    input(type='hidden' name='cmd' value='_s-xclick')
+                    input(type='image' class= "button" src='https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif' border='0' name='submit' title='PayPal - The safer, easier way to pay online!' alt='Donate with PayPal button')
+                    img(alt='' border='0' src='https://www.paypal.com/en_US/i/scr/pixel.gif' width='1' height='1')
+            div.text1
+                p Nabi Freedom doesn't receive any federal government funds. Nabi Freedom entirely relies on generous individuals, friends and families, organizations, communities for their support. We thank all our sponsors who supported us and will continue to support.
+    div.box2
+        div.flex
+            div.redirectPayPal#oneTime
+                h2 Donate One Time
+                p Checks can be made to Nabi Freedom, and sent to:
+                p Nabi Freedom
+                p P.O. Box 38574
+                p Houston, TX 77238
+            div.text1#address
+                p We strongly encourage you to at least give once at your most convenient cash flow time.
+                p You can give at any time during th year.
+                p If you have nay other questions or would like to donate differently please fill our contact us form and we will get back yo you in 1 week.
+                p Any kind of donations are accepted including checks and all type of credi cards
+    div.box3 
+        div.flex
+            div.redirectPayPal#oneTime
+                h3 Any Kind of Donations
+                ul 
+                    li Gift Cards
+                    li Food Cards
+                    li Gas Cards
+                    li Goodies
+                    li Food Catering
+            div.text1#last
+                p We accept any kind of donations. We need all kind of gift cards, food cards, gas cards for our newly rehabilitated citizens. 
+                p Also we need phones.
+                p Other items needed are cars, gently used furniture, household items
 
 
