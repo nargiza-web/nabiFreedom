@@ -2,10 +2,10 @@ const express = require("express")
 const app = express()
 const bodyParser = require("body-parser")
 const accountRouter = require("./routes/account-router")
+
 const aboutUs = require("./routes/aboutUs")
-
+const freshStart = require("./routes/freshStart")
 const donationRouter = require("./routes/donation")
-
 const contactUs = require("./routes/contactUs")
 
 app.set("view engine", "pug")
@@ -22,6 +22,8 @@ app.use("/aboutUs", aboutUs)
 app.use("/contactUs", contactUs)
 
 app.use("/donation", donationRouter)
+
+app.use("/freshStart", freshStart)
 
 
 
