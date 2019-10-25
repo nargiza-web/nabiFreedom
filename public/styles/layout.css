@@ -10,7 +10,7 @@
     float: right;
 }
 .logo {
-    margin-top: -2%;
+    margin-top: -1%;
     margin-left: 15%;
     float: left;
     width: 20%;
@@ -51,6 +51,7 @@ a:hover{
     font-family: sans-serif;
 }
 .interior{
+  margin-top: 6.5%;
   background-color: #17023d;
   margin-left:0;
 

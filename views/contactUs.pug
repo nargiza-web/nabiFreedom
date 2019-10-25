@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html(lang="en")
     head
         meta(charset="UTF-8")
@@ -57,6 +58,52 @@ html(lang="en")
                     input.submit(type="submit")
                     br
     footer.footer NABIfreedom is a 501 (c) 3 non-profit as determined by the Internal           Revenue Service.&copy;2017 NABIFreedom. All rights reserved. PO BOX 38574 Houston TX 77238.           
+=======
+extend ./layout
+block head
+    link(rel="stylesheet" href = "./styles/contactUs.css")
+
+block content
+    div.interior 
+        div.box  
+            if query.submitwassucceccfull
+                .success 
+                    p.messege *Thank you for contacting us, we will get back to you soon!.
+        
+                
+            form(action="/contactUs" method="POST")
+                .form-group * First Name: 
+                
+                input(type="text" name="firstName")
+                br
+                | Last Name:
+                br
+                input(type="text" name="lastName")
+                br
+                | Title
+                br
+                input(type="text" name="title")
+                br
+                | Address
+                br
+                input(type="text" name="address")
+                br
+                | * Email 
+                br
+                input(type="text" name="email")
+                br
+                | Phone
+                br
+                input(type="text" name="phone")
+                br
+                | * Purpose For Contacting Us
+                br
+                textarea(name="message" rows='15' cols='30')
+                br 
+                input.submit(type="submit")
+                br
+         
+>>>>>>> 4a25da4e86f4eb73ad149542c1946935135b0a10
 
 
 
