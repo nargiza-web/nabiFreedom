@@ -4,17 +4,22 @@
     justify-content: center;
   }
 .navigation-bar {
-    margin-top: 6%;
-    padding-top: 0;
+    margin-top: 30px;
+    margin-left:0;
+    padding-top: 20px;
     padding-left: 10%;
-    float: right;
+    
+    
+    
+    
 }
 .logo {
-    margin-top: -2%;
-    margin-left: 15%;
+    margin-top: -1%;
+    margin-left: 2%;
     float: left;
     width: 20%;
     height: auto;
+    
 }
 .navigation-bar > a {
     padding: 2%;
@@ -23,7 +28,9 @@
     font-family: sans-serif;
     font-size: large;
     text-decoration: none;
+    
 }
+
 a:hover{
   color: gray;
 }
@@ -51,6 +58,7 @@ a:hover{
     font-family: sans-serif;
 }
 .interior{
+  /* margin-top: ; */
   background-color: #17023d;
   margin-left:0;
 
