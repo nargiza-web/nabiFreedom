@@ -16,15 +16,11 @@ html(lang="en")
                 a(href='takeAction') Take Action
                 a(href='freshStart') Fresh Start
                 a(href='/contactUs') Contact Us
-<<<<<<< HEAD
-                a(href='account/login') Login / Sign up
-=======
                 if session.user && session.user.isAuthenticated
                     a(href='/account') Dashboard
                     a(href="/account/logout") Logout
                 else
                     a(href='/account/login') Login
->>>>>>> 4a25da4e86f4eb73ad149542c1946935135b0a10
         block content
           body
             div.interior 
