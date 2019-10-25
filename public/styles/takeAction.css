@@ -1,59 +1,129 @@
 .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .navigation-bar {
-    margin-top: 6%;
-    padding-top: 0;
-    padding-left: 10%;
-    float: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.navigation-bar {
+  margin-top: 6%;
+  padding-top: 0;
+  padding-left: 10%;
+  float: right;
+  
+}
+.logo {
+  margin-top: -2%;
+  margin-left: 15%;
+  float: left;
+  width: 20%;
+  height: auto;
+ 
+}
+.navigation-bar > a {
+  padding: 2%;
+  padding-left: 0.5%;
+  color: #17023d;
+  font-family: sans-serif;
+  font-size: large;
+  text-decoration: none;
+  
+}
+a:hover{
+color: gray;
+}
+#donate{
+color: red;
+}
+#donate:hover{
+text-decoration: underline;
+font-weight: bold;
+
+}
+.home-image{
+margin-left: 17%;
+margin-top: 5%;
+}
+
+.login{
+  margin-bottom:10%;
+  float: right;
+  color: #17023d;
+  font-family: sans-serif;
+}
+
+footer{
+  padding-top: 3%;
+  font-family: sans-serif;
+  color: #17023d;
+  text-align: center;
+  font-size: medium;
+}
+.box1 {
+  margin-top: 10vh;
+  width: 100%;
+  height: 100%; 
+  background-image: url("/images/DONATE.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.box2 {
+  height: 100%; 
+  background-image: url("/images/EVENTS.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.box3 {
+  height: 100%;
+  background-image: url("/images/PENPAL.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.box4 {
+  height: 100%;
+  background-image: url("/images/MENTOR.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.interior{
+  background-color: #17023d;
+  margin-left:0;
+
+}  
+.signUp{
+  position: absolute;
+  position: fixed;
+  top: 50%;
+  left: 2%;
+  width: 7%;
+  height: auto;
+  background-color: orange;
+  color: white;
+  font-size: 18px;
+  font-weight: bolder;
+  border-radius: 5px;
+  border: none;
     
-  }
-  .logo {
-    margin-top: -2%;
-    margin-left: 15%;
-    float: left;
-    width: 20%;
-    height: auto;
-   
-  }
-  .navigation-bar > a {
-    padding: 2%;
-    padding-left: 0.5%;
-    color: #17023d;
-    font-family: sans-serif;
-    font-size: large;
-    text-decoration: none;
+}
+.signUp2{
+  position: absolute;
+  position: fixed;
+  top: 50%;
+  right: 2%;
+  width: 7%;
+  height: auto;
+  background-color: orange;
+  color: white;
+  font-size: 18px;
+  font-weight: bolder;
+  border-radius: 5px;
+  border: none;
     
-  }
-  a:hover{
-  color: gray;
-  }
-  #donate{
-  color: red;
-  }
-  #donate:hover{
-  text-decoration: underline;
-  font-weight: bold;
-  
-  }
-  .home-image{
-  margin-left: 17%;
-  margin-top: 5%;
-  }
-  
-  .login{
-    margin-bottom:10%;
-    float: right;
-    color: #17023d;
-    font-family: sans-serif;
-  }
-  
-  footer{
-    padding-top: 3%;
-    font-family: sans-serif;
-    color: #17023d;
-    text-align: center;
-    font-size: medium;
-  }
+}
