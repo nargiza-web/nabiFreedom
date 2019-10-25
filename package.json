@@ -2,9 +2,11 @@
   "name": "nabiFreedom",
   "version": "1.0.0",
   "description": "web site for www.nabifreedom.org",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run db:migrate && npm run serve",
+    "serve": "node app.js",
+    "db:migrate": "npx sequelize-cli db:migrate"
   },
   "repository": {
     "type": "git",
