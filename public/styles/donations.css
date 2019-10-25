@@ -2,6 +2,28 @@ body {
     margin:0;
     padding:0;
   }
+  
+  .container{
+    width: 960px;
+    height: 100vh;
+  }
+  
+  .string1{
+    width:260px;
+    float:left;
+    background: #eee;
+  }
+  .string2 {
+    width: 700px;
+    float:left;
+    background: blue;
+  }
+  
+  
+  
+  
+  
+  
   /*
   .box1 {
     width:100%;
@@ -14,7 +36,7 @@ body {
   }
   */
   
-  
+  /*
   .image1 {
     height:37%;
     width:100%;
@@ -23,6 +45,7 @@ body {
     background-position: center;
     display: table;
     /* background-attachment: fixed; */  
+    /*
   }
   
   .flex{
@@ -80,7 +103,9 @@ body {
     height: 240px;
     width: 100%;
     background-color: #BD9B75;
+    */
     /*background-image: url("https://cdn.pixabay.com/photo/2016/01/07/10/46/freedom-1125539_960_720.jpg");*/
+    /*
     background-size: cover;
     background-position: center;
     display: table;
@@ -89,9 +114,9 @@ body {
   
   .box3 {
     height: 250px;
-    width: 100%;
+    width: 100%;*/
     /*background-image: url("https://thenypost.files.wordpress.com/2019/05/family-jail.jpg?quality=90&strip=all&w=618&h=410&crop=1");*/
-    background-size: cover;
+    /*background-size: cover;
     background-position: center;
     display: table;
     background-attachment: fixed;
@@ -106,3 +131,4 @@ body {
     display: table-cell;
     vertical-align: middle;
   }
+  */
