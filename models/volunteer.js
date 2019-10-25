@@ -5,7 +5,8 @@ module.exports = (sequelize, DataTypes) => {
     password: DataTypes.TEXT,
     first_name: DataTypes.STRING,
     last_name: DataTypes.STRING,
-    phone_number: DataTypes.STRING
+    phone_number: DataTypes.STRING,
+    services: DataTypes.STRING
   }, {});
   Volunteer.associate = function(models) {
     // associations can be defined here

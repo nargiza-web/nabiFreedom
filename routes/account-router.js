@@ -13,6 +13,13 @@ router.get("/", accountHelper.redirectIfNotSignedIn, (req, res) => {
     res.redirect("account/dashboard")
 })
 
+
+router.get("/logout", (req, res) => {
+    req.session.destroy()
+    res.redirect("/")
+})
+
+
 router.get("/dashboard",accountHelper.redirectIfNotSignedIn, (req, res) => {
     let userSession = req.session.user
     accountHelper.getEntry(userSession.userType, {id:userSession.userId}, (user) => {
@@ -27,9 +34,27 @@ router.get("/dashboard",accountHelper.redirectIfNotSignedIn, (req, res) => {
     })
 })
 
-router.get("/logout", (req, res) => {
-    req.session.destroy()
-    res.redirect("/")
+router.post("/dashboard", accountHelper.redirectIfNotSignedIn, (req, res) => {
+    let userSession = req.session.user
+    let serviceStr = JSON.stringify({
+            penpal:req.body.penpal,
+            goodies:req.body.goodies,
+            jobSponsor:req.body.jobSponsor,
+            mentor:req.body.mentor,
+            other:req.body.other
+        })
+    accountHelper.getEntry(userSession.userType, {id: userSession.userId}, (user) => {
+        user.update(
+            {services: serviceStr},
+            {
+                returning:true,
+                where:{id:user.id}
+            }
+        )
+        .catch()    
+    })
 })
+
+
 
 module.exports = router
