@@ -51,7 +51,8 @@ router.post("/dashboard", accountHelper.redirectIfNotSignedIn, (req, res) => {
                 where:{id:user.id}
             }
         )
-        .catch()    
+        .then(res.redirect("/account/dashboard?changesSaved=true"))
+        .catch(res.redirect("/account/dashboard?changesSaved=false"))    
     })
 })
 

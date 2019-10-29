@@ -24,7 +24,7 @@ router.post("/", (req, res) => {
         if (user) {
             accountHelper.chkPassword(req.body.password, user, x => {
                 req.session.user = {userType:userType, userId:user.id, isAuthenticated:true}
-                res.redirect("/")
+                res.redirect("/account")
             }, loginFailure)
         } else loginFailure();
     })
