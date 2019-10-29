@@ -1,3 +1,6 @@
+body, html {
+  height: 100%;
+}
 .container{
   display: flex;
   flex-direction: column;
@@ -58,40 +61,30 @@ footer{
   font-size: medium;
 }
 .box1 {
-  margin-top: 10vh;
-  width: 100%;
-  height: 100%; 
+  margin-top: 30px;
   background-image: url("/images/DONATE.png");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  min-height:100%;
 }
 .box2 {
-  height: 100%; 
   background-image: url("/images/EVENTS.png");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  min-height: 100%;
 }
 
 .box3 {
-  height: 100%;
   background-image: url("/images/PENPAL.png");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  min-height:100%;
 }
 .box4 {
-  height: 100%;
   background-image: url("/images/MENTOR.png");
-  background-attachment: fixed;
+  min-height:100%;
+}
+.box1, .box2, .box3, .box4 {
+  position: relative;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-}
+  background-attachment: fixed;
+} 
+
 .interior{
   background-color: #17023d;
   margin-left:0;
@@ -110,6 +103,7 @@ footer{
   font-weight: bolder;
   border-radius: 5px;
   border: none;
+  z-index: 7;
     
 }
 .signUp2{
@@ -125,5 +119,16 @@ footer{
   font-weight: bolder;
   border-radius: 5px;
   border: none;
-    
+  z-index: 9;
+}
+
+@media (max-width:768px) {
+  .signUp {
+    width: 46px;
+    height: auto;
+    position: absolute;
+    top: 5%;
+    z-index: 7;
+    font-weight: bolder;
+  }
 }

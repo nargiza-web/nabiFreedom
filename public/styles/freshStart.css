@@ -59,42 +59,28 @@
   }
 
 .box1 {
-    /* height: 80%;
-    width:100%;
-    margin-left:13%; */
-    margin-top: 10vh;
-    width: 100%;
-    height: 100%; 
+  margin-top: 30px;
     background-image: url("/images/empower.png");
-    /* background-size: cover; */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    min-height: 100%;
   }
+
   .box2 {
-    /* height: 80%;
-    width: 100%; */
-    height: 100%; 
     background-image: url("/images/potential.png");
-    /* background-size: cover; */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    min-height: 100%;
   }
   
   .box3 {
-    /* height: 100vh;
-    width: 100vw; */
-    height: 100%;
     background-image: url("/images/start.png");
-    /* background-size: cover; */
-    background-attachment: fixed;
+    min-height: 100%;
+  }
+  
+  .box1, .box2, .box3 {
+    position: relative;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-attachment: fixed;
   }
+  
   .interior{
     background-color: #17023d;
     margin-left:0;
@@ -113,6 +99,7 @@
     font-weight: bolder;
     border-radius: 5px;
     border: none;
+    z-index: 9;
       
   }
   .signUp2{
@@ -128,5 +115,16 @@
     font-weight: bolder;
     border-radius: 5px;
     border: none;
-      
+    z-index: 9;
+  }
+  
+  @media (max-width: 768px){
+    .signUp {
+      width: 57px;
+      height:auto;
+      position: absolute;
+      top: 5%;
+      z-index: 7;
+      font-weight: bolder;
+    }
   }
