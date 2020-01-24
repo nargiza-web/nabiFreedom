@@ -10,7 +10,7 @@ ___
  * __Purpose of this website:__ This is a website for non-profit organization where it helps people in jail. We wanted to contribute to the community with what we can. Keeps track of who has been released, and what type of need they urge for, offers not only material help but also mentorship to get back to the community. 
  
  * __How to use:__ Users should register and login to be able to get all the benefits that Nabi Freedom is offering. Users can login as a mentor/volunteer or person out of jail and needs help. We have built in check-boxes for both if the user would like to help or recieve help on food/shelter/mentorship/job/penpall...etc
-* __Features on the app:__ The app authentication system has validation on both registering and loging in processes. User dashboards are specific to each user. When user logs out an logs in back, the all info which the user entered before will be available in each session.
+* __Features on the app:__ The app authentication system has validation on both registering and loging in processes. User dashboards are specific to each user. When user logs out an logs in back, the all info which the user entered before will be available in each session. We also added donation button and used Pen Pall service to handle all transactions securely.
 
 ## Site Preview:
 #### HOME PAGE:
