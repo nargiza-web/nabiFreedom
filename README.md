@@ -13,8 +13,9 @@ ___
 * __Features on the app:__ The app authentication system has validation on both registering and loging in processes. User dashboards are specific to each user. When user logs out an logs in back, the all info which the user entered before will be available in each session.
 
 ## Site Preview:
-#### HOME PAGE
+#### HOME PAGE:
 ![HOME PAGE](https://raw.githubusercontent.com/nargiza-web/nabiFreedom/master/public/images/nabiReadme.png)
+#### TAKE ACTION PAGE:
 ![Nabi Freedom](https://raw.githubusercontent.com/nargiza-web/nabiFreedom/master/public/images/MENTOR.png)
 
 ## Live link:
